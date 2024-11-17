@@ -53,6 +53,7 @@
     }
   ],
   "devDependencies": {
+     "@types/react-test-renderer": "^18.3.0",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.25.9",
     "@rollup/plugin-image": "^3.0.3",
@@ -81,7 +82,7 @@
     "de la rubia"
   ],
   "dependencies": {
-    "@types/react-test-renderer": "^18.3.0"
+   
   },
   "jest": {
     "moduleNameMapper": {
