@@ -5,7 +5,12 @@
  ## Ejemplo 
 
  ```
-import { ProductCard, ProductImg, ProductTitle, ProductButtons } form "product-card-leio"
+  import { 
+    ProductCard, 
+    ProductImg, 
+    ProductTitle, 
+    ProductButtons 
+  } from "product-card-leio"
  ```
 
 ```
@@ -16,12 +21,18 @@ import { ProductCard, ProductImg, ProductTitle, ProductButtons } form "product-c
           maxCount: 10
         }}>
         {
-          ({ reset, count, increaseBy, isMaxCountReached, maxCount }) => (
+          (
+            { 
+              reset, 
+              count, 
+              increaseBy, 
+              isMaxCountReached, 
+              maxCount 
+            }) => (
             <>
               <ProductImg />
               <ProductTitle />
               <ProductButtons />
-
             </>
           )
         }
