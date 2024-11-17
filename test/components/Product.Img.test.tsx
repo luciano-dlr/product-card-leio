@@ -1,29 +1,29 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import { ProductTitle, ProductCard } from '../../src/components/';
-import { product1 } from '../data/product';
+import { ProductImg, ProductCard } from '../../src/components/';
+import { product2 } from '../data/product';
 
 
 describe('Product title and Card', () => {
 
-    test('Debe de mostrar el componente correctamente con el titulo personalizado ', () => {
+    test('Debe de mostrar el componente correctamente con Imagen Correspondiente', () => {
 
         const wraper = renderer.create(
-            <ProductTitle title="Custom Product" />
+            <ProductImg img="https://hola.jpg" />
         )
 
         expect(wraper.toJSON()).toMatchSnapshot();
 
 
     })
-    test('Debe de mostrar el componente correctamente con el titulo personalizado ', () => {
+    test('Debe de mostrar el componente correctamente con Imagen Correspondiente', () => {
 
         const wraper = renderer.create(
-            <ProductCard product={product1}>
+            <ProductCard product={product2}>
                 {
                     () => (
                         <>
-                            <ProductTitle />
+                            <ProductImg />
                         </>
                     )
                 }

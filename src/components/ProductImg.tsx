@@ -8,18 +8,30 @@ import ProductContext from "./ProductCardContext";
 export interface ProductCardImgProps {
   className?: string;
   style?: CSSProperties;
+  img?: string;
 }
 
-export const ProductImg = ({ className = "", style }: ProductCardImgProps) => {
+export const ProductImg = ({ className, style, img }: ProductCardImgProps) => {
   const { product } = useContext(ProductContext);
-  const { img } = product;
+  // const { img } = product;
+
+
+  let imgToShow: string;
+
+  if (img) {
+    imgToShow = img;
+  } else if (product.img) {
+    imgToShow = product.img
+  } else {
+    imgToShow = NoImage;
+  }
 
   return (
     <img
-      style={style}
-      src={img ? img : NoImage}
-      alt="Image product Coffe"
       className={`${styles.productImg} ${className}`}
+      src={imgToShow}
+      style={style}
+      alt="Product"
     />
   );
 };
