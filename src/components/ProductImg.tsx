@@ -15,7 +15,6 @@ export const ProductImg = ({ className, style, img }: ProductCardImgProps) => {
   const { product } = useContext(ProductContext);
   // const { img } = product;
 
-
   let imgToShow: string;
 
   if (img) {

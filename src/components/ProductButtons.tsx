@@ -17,7 +17,6 @@ export const ProductButtons = ({ className = "", style, }: ProductCardButtonsPro
   //false si no lo es
   const isMaxReach = useCallback(() => counter === maxCount, [counter, maxCount]);
 
-
   return (
     <div className={`${styles.buttonsContainer} ${className}`} style={style}>
       <button
